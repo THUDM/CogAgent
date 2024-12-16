@@ -1,73 +1,94 @@
-The CogVLM License
+The CogAgent License
 
 1. Definitions
 
-“Licensor” means the CogVLM Model Team that distributes its Software.
-
-“Software” means the CogVLM model parameters made available under this license.
+"Licensor" refers to the CogAgent model team distributing its software.
+"Software" refers to the CogAgent model parameters provided under this license.
 
 2. License Grant
 
-Subject to the terms and conditions of this License, the Licensor hereby grants to you a non-exclusive, worldwide, non-transferable, non-sublicensable, revocable, royalty-free copyright license to use the Software.
+Subject to the terms and conditions of this license, the Licensor hereby grants you a non-exclusive, worldwide, non-transferable, non-sublicensable, revocable, royalty-free copyright license.
+This license permits you to use all open-source models in this repository for free for academic research purposes. Users wishing to use the model for commercial purposes must complete registration [here](https://open.bigmodel.cn/mla/form). Registered users may use the model for commercial activities free of charge but must comply with all terms and conditions of this license.
+The above copyright statement and this license statement must be included in all copies or significant portions of the software.
+If you distribute or provide materials from THUDM/Zhipu AI regarding the CogAgent open-source model (or any derivative works thereof) or use any materials (including all open-source models in the CogAgent series) in products or services, you must:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+(A) Provide a copy of this agreement with any such materials from THUDM/Zhipu AI;
+(B) Prominently display “Built with CogAgent” on relevant websites, user interfaces, blog posts, about pages, or product documentation.
+If you use materials from THUDM/Zhipu AI's CogAgent open-source model to create, train, fine-tune, or otherwise improve distributed or publicly available AI models, you must also prepend “CogAgent” to the names of any such AI models.
 
-3. Restriction
+3. Restrictions
 
-You will not use, copy, modify, merge, publish, distribute, reproduce, or create derivative works of the Software, in whole or in part, for any military, or illegal purposes.
-
-You will not use the Software for any act that may undermine China's national security and national unity, harm the public interest of society, or infringe upon the rights and interests of human beings.
+You must comply with applicable laws, regulations, ethical standards, and other requirements in your jurisdiction when using this software. You must independently obtain permissions, licenses, or other access rights required by third-party software/applications and make prudent and independent judgments on all operational decisions. You must not use the software or implement the following actions in an improper manner:
+(1) Use, copy, modify, merge, publish, distribute, or create derivative works of this software, in whole or in part, for any military or illegal purposes;
+(2) Engage in activities that harm national security, public interest, social morals, or infringe upon others' trade secrets, intellectual property, reputation, portrait rights, property rights, or other rights and interests;
+(3) Use the software for fraud, phishing, spamming, misleading, bullying, harassment, discrimination, hate promotion, or dissemination of false information;
+(4) Use the software to make automated high-risk decisions in fields such as health, education, credit, finance, or critical infrastructure management, which significantly impact individual or societal safety, rights, or welfare;
+(5) Rely on the software to perform major operations, including but not limited to monetary transactions, large purchases, placing irreversible orders, or publishing content detrimental to others' rights or social ethics;
+(6) Use the software in services requiring subject qualifications or professional review, or as a substitute for professional services in fields such as medicine, law, journalism, education, or financial investment;
+(7) Use the software dishonestly, claim or imply AI-generated content is human-created, or disguise human-created works as AI-generated content;
+(8) Engage in illegal network intrusion, disrupt normal network functionality, steal network data, or deliberately spread malicious programs or viruses that harm network security and order;
+(9) Collect personal information unlawfully or use the software in a way that infringes upon any third party’s personal information protection rights or privacy.
+The Licensor bears no responsibility for your actions while using this software, and you shall assume all resulting liabilities.
 
 4. Disclaimer
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+The software is provided "as is" without any express or implied warranties, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.
+The Licensor does not guarantee the content or operations executed by the software are entirely accurate, reliable, functional, timely, secure, error-free, uninterrupted, or continuously stable. The Licensor is not liable for risks arising from your operational errors or software defects.
+In no event shall the authors or copyright holders be liable for any claims, damages, or other liabilities, whether in contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
 
 5. Limitation of Liability
 
-EXCEPT TO THE EXTENT PROHIBITED BY APPLICABLE LAW, IN NO EVENT AND UNDER NO LEGAL THEORY, WHETHER BASED IN TORT, NEGLIGENCE, CONTRACT, LIABILITY, OR OTHERWISE WILL ANY LICENSOR BE LIABLE TO YOU FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES, OR ANY OTHER COMMERCIAL LOSSES, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+To the maximum extent permitted by applicable law, in no event and under no legal theory shall the Licensor be liable for any direct, indirect, special, incidental, exemplary, or consequential damages, or any other commercial losses, even if the Licensor has been advised of the possibility of such damages.
 
 6. Dispute Resolution
 
-This license shall be governed and construed in accordance with the laws of People’s Republic of China. Any dispute arising from or in connection with this License shall be submitted to Haidian District People's Court in Beijing.
+This license is governed by and construed in accordance with the laws of the People's Republic of China. Any disputes arising out of or in connection with this license shall be submitted to the People's Court of Haidian District, Beijing.
+Please note that this license may be updated to a more comprehensive version. For any questions about the license or copyright, please contact us at license@zhipuai.cn or opensource@zhipuai.cn.
 
-Note that the license is subject to update to a more comprehensive version.  For any questions related to the license and copyright, please contact us at license@zhipuai.cn.
-
-7. Llama2 and EVA-CLIP2 license
-
-For CogVLM-17B version, Llama2 license (https://ai.meta.com/llama/license/) and EVA license (MIT, https://github.com/baaivision/EVA/blob/master/LICENSE) are applied.
+CogAgent系列模型开源协议
 
 1. 定义
 
-“许可方”是指分发其软件的 CogVLM 模型团队。
-
-“软件”是指根据本许可提供的 CogVLM 模型参数。
+“许可方”是指分发其软件的 CogAgent系列 模型团队。
+“软件”是指根据本许可提供的 CogAgent系列 模型参数。
 
 2. 许可授予
 
 根据本许可的条款和条件，许可方特此授予您非排他性、全球性、不可转让、不可再许可、可撤销、免版税的版权许可。
-
+本许可仅允许您免费使用本仓库中的所有开源模型进行学术研究，对于希望将模型用于商业目的的用户，需在[这里](https://open.bigmodel.cn/mla/form)完成登记。经过登记的用户可以免费使用本模型进行商业活动，但必须遵守本许可的所有条款和条件。
 上述版权声明和本许可声明应包含在本软件的所有副本或重要部分中。
+如果您分发或提供 THUDM / 智谱AI 关于 CogAgent系列开源模型的材料（或其任何衍生作品），或使用其中任何材料（包括 CogAgent系列的所有开源模型）的产品或服务，您应:
 
-3.限制
+(A) 随任何此类 THUDM / 智谱AI 材料提供本协议的副本；
+(B) 在相关网站、用户界面、博客文章、关于页面或产品文档上突出显示 “Built with CogAgent”。
+如果您使用 THUDM / 智谱AI的 CogAgent系列开源模型的材料来创建、训练、微调或以其他方式改进已分发或可用的 AI 模型，您还应在任何此类 AI 模型名称的开头添加 “CogAgent”。
 
-您不得出于任何军事或非法目的使用、复制、修改、合并、发布、分发、复制或创建本软件的全部或部分衍生作品。
+3. 限制
 
-您不得利用本软件从事任何危害国家安全和国家统一、危害社会公共利益、侵犯人身权益的行为。
+您在使用中应遵循使用地所适用的法律法规政策、道德规范等要求，在操作应用程序时自行取得第三方软件/应用所需的操作权限、授权或其他准入要求并对所有操作决策进行独立审慎的判断。您不得以以下不当方式使用软件或利用软件实施以下行为：
+(1)	出于任何军事或非法目的使用、复制、修改、合并、发布、分发、复制或创建本软件的全部或部分衍生作品；
+(2)	利用本软件从事任何危害国家安全和国家统一，危害社会公共利益及公序良俗，侵犯他人商业秘密、知识产权、名誉权、肖像权、财产权等权益的行为；
+(3)	用于欺诈、诈骗、发送垃圾短信/邮件、误导、欺凌、骚扰、歧视、宣扬仇恨、传播虚假信息等途径；
+(4)	利用软件实施任何决策行为，如在健康、教育、信贷、金融、关键基础设施管理等对个人及社会的安全、权利或福祉有重大影响的领域做出高风险的自动化决策；
+(5)	依赖本软件执行任何重大的操作，包括但不限于资金交易、大额消费、下单不可撤销的订单、发布有损他人权益或社会公德的消息等；
+(6)	用于任何对主体资格有要求或需要专业人员审查的服务中，或作为专业服务的替代品，包括但不限于医疗、律师、新闻、教育、投资理财等专业领域；
+(7)	以不诚实的方式使用，主张或声称人工智能的生成物是人类的作品，或将人类的作品伪装为人工智能的生成物；
+(8)	非法侵入网络、干扰网络正常功能、窃取网络数据、故意传播恶意程序或病毒等危害网络安全和网络秩序的活动；
+(9)	违法采集他人个人信息，或以可能侵犯任何第三方个人信息保护权及隐私的方式使用本软件。
+许可方不对您使用本软件的行为承担任何责任，由此产生的责任将由您自行承担。
 
-4.免责声明
+4. 免责声明
 
-本软件“按原样”提供，不提供任何明示或暗示的保证，包括但不限于对适销性、特定用途的适用性和非侵权性的保证。 在任何情况下，作者或版权持有人均不对任何索赔、损害或其他责任负责，无论是在合同诉讼、侵权行为还是其他方面，由软件或软件的使用或其他交易引起、由软件引起或与之相关 软件。
+本软件“按原样”提供，不提供任何明示或暗示的保证，包括但不限于对适销性、特定用途的适用性和非侵权性的保证。
+许可方不保证软件生成的内容及执行的操作百分百准确可靠、功能可用、及时、安全、无错误、不受干扰、无中断、持续稳定、不存在任何故障，AI并不能真正像人类一样理解您输入的内容及指令，如果由于您的操作失误或AI的缺陷导致的风险，许可方不承担相应的责任。
+在任何情况下，作者或版权持有人均不对任何索赔、损害或其他责任负责，无论是在合同诉讼、侵权行为还是其他方面，包括但不限于由软件或软件的使用引起、利用软件进行的交易或与软件相关引起的问题。
 
 5. 责任限制
 
-除适用法律禁止的范围外，在任何情况下且根据任何法律理论，无论是基于侵权行为、疏忽、合同、责任或其他原因，任何许可方均不对您承担任何直接、间接、特殊、偶然、示范性、 或间接损害，或任何其他商业损失，即使许可人已被告知此类损害的可能性。
+除适用法律禁止的范围外，在任何情况下且根据任何法律理论，无论是基于侵权行为、疏忽、合同、责任或其他原因，任何许可方均不对您承担任何直接、间接、特殊、偶然、示范性、
+或间接损害，或任何其他商业损失，即使许可人已被告知此类损害的可能性。
 
-6.争议解决
+6. 争议解决
 
 本许可受中华人民共和国法律管辖并按其解释。 因本许可引起的或与本许可有关的任何争议应提交北京市海淀区人民法院。
-
-请注意，许可证可能会更新到更全面的版本。 有关许可和版权的任何问题，请通过 license@zhipuai.cn 与我们联系。
-
-7. Llama2 和 EVA-CLIP2 许可
-
-针对 CogVLM-17B 版本， Llama2 许可条件 (https://ai.meta.com/llama/license/) 和 EVA 许可条件 (MIT, https://github.com/baaivision/EVA/blob/master/LICENSE) 同时适用于模型权重。
+请注意，许可证可能会更新到更全面的版本。 有关许可和版权的任何问题，请通过 license@zhipuai.cn 或 opensource@zhipuai.cn 与我们联系。
