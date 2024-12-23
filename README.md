@@ -4,6 +4,13 @@ Read this in [English](README_en.md)
 
 ## 关于模型
 
+### 模型简介
+
+`cogagent-9b-20241220` 是 我们基于 [GLM-4V-9B](https://huggingface.co/THUDM/glm-4v-9b) 训练得到的一个专门用于
+Agent任务的模型。
+`cogagent-9b-20241220` 是一款较为先进的智能体模型，它具备强大的跨平台兼容性，能够实现对多种计算设备上的图形界面进行自动化的操作。
+无论是Windows、macOS还是Android系统，`cogagent-9b-20241220` 都能够接收用户指令，自动获取设备屏幕截图，经过模型推理后执行自动化设备操作。
+
 ### 能力展示
 
 <div style="display: flex; flex-direction: column; width: 100%; align-items: center; margin-top: 20px;">
@@ -16,18 +23,6 @@ Read this in [English](README_en.md)
         <p>想提个Issue,让 CogAgent帮你发邮件。</p>
     </div>
 </div>
-
-### 模型简介
-
-`cogagent-9b-20241220` 是 我们基于 [GLM-4V-9B](https://huggingface.co/THUDM/glm-4v-9b) 训练得到的一个专门用于
-Agent任务的模型。
-`cogagent-9b-20241220` 是一款较为先进的智能体模型，它具备强大的跨平台兼容性，能够实现对多种计算设备上的图形界面进行自动化的操作。
-无论是Windows、macOS还是Android系统，`cogagent-9b-20241220` 都能够接收用户指令，自动获取设备屏幕截图，经过模型推理后执行自动化设备操作。
-
-
-### 性能数据
-
-这里展现了模型在一些榜单上的数据:
 
 ### 模型下载链接
 
@@ -241,6 +236,6 @@ python inference/web_demo.py --host 0.0.0.0 --port 7860 --model_dir THUDM/cogage
 
 ## 协议
 
-本 github 仓库代码的使用 [Apache2.0 LICENSE](LICENSE)。
+- 本 github 仓库代码的使用 [Apache2.0 LICENSE](LICENSE)。
 
-模型权重的使用请遵循 [Model License](MODEL_LICENSE)。
+- 模型权重的使用请遵循 [Model License](MODEL_LICENSE)。
