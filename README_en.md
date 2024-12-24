@@ -1,15 +1,24 @@
 # CogAgent
 
-## About the Model
+## Model Introduction
+
+### Model Resource
+
+|        Model         |                                                                                                                                                            Model Download Link                                                                                                                                                             | Technical Documentation                                                                                                                                                                                                                 | Online Demo                                                                        |                                                          
+|:--------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|   
+| cogagent-9b-20241220 | [🤗 HuggingFace](https://huggingface.co/THUDM/cogagent-9b-20241220)<br> [🤖 ModelScope](https://modelscope.cn/models/ZhipuAI/cogagent-9b-20241220) <br> [🟣 WiseModel](https://wisemodel.cn/models/ZhipuAI/cogagent-9b-20241220) <br>[🧩 Modelers](https://modelers.cn/models/zhipuai/cogagent-9b-20241220) (Optimized for Ascend Devices) | [📄 Technical Report](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report-en)<br/>[📘 ZhipuAI Technical Documentation](https://zhipu-ai.feishu.cn/wiki/MhPYwtpBhinuoikNIYYcyu8dnKv?fromScene=spaceOverview) | [🚀 HuggingFace Space](https://huggingface.co/spaces/THUDM-HF-SPACE/CogAgent-Demo) | 
 
 ### Model Overview
 
-`cogagent-9b-20241220` is a model we have trained based on [GLM-4V-9B](https://huggingface.co/THUDM/glm-4v-9b), designed
-specifically for agent tasks.  
-`cogagent-9b-20241220` is an advanced agent model that features strong cross-platform compatibility, enabling it to
-automate graphical interface operations on a variety of computing devices. Whether on Windows, macOS, or Android,
-`cogagent-9b-20241220` can receive user instructions, automatically capture device screenshots, perform model inference,
-and execute automated device operations.
+`CogAgent-9B-20241220` model is based on [GLM-4V-9B](https://huggingface.co/THUDM/glm-4v-9b), a bilingual open-source
+VLM base model. Through data collection and optimization, multi-stage training, and strategy improvements,
+`CogAgent-9B-20241220` achieves significant advancements in GUI perception, inference prediction accuracy, action space
+completeness, and generalizability across tasks. The model supports bilingual (Chinese and English) interaction with
+both screenshots and language input.
+
+This version of the CogAgent model has already been applied in
+ZhipuAI's [GLM-PC product](https://cogagent.aminer.cn/home). We hope the release of this model can assist researchers
+and developers in advancing the research and applications of GUI agents based on vision-language models.
 
 ### Capability Demonstrations
 
@@ -23,12 +32,6 @@ and execute automated device operations.
         <p>Want to open an issue? Let CogAgent help you send an email.</p>
     </div>
 </div>
-
-### Model Download Links
-
-|        Model         |                                                                                                          Download Link                                                                                                           |                    Download Link (Ascend Optimized)                    | Try it Online                                                                      |
-|:--------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------:|------------------------------------------------------------------------------------|
-| cogagent-9b-20241220 | [🤗 HuggingFace](https://huggingface.co/THUDM/cogagent-9b-20241220)<br> [🤖 ModelScope](https://modelscope.cn/models/ZhipuAI/cogagent-9b-20241220) <br> [🟣 WiseModel](https://wisemodel.cn/models/ZhipuAI/cogagent-9b-20241220) | [🧩 Modelers](https://modelers.cn/models/zhipuai/cogagent-9b-20241220) | [🚀 HuggingFace Space](https://huggingface.co/spaces/THUDM-HF-SPACE/CogAgent-Demo) |
 
 ### Inference and Fine-tuning Costs
 
