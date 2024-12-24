@@ -15,11 +15,11 @@ Agent任务的模型。
 
 <div style="display: flex; flex-direction: column; width: 100%; align-items: center; margin-top: 20px;">
     <div style="text-align: center; margin-bottom: 20px; width: 100%; max-width: 600px; height: auto;">
-        <video src="https://github.com/user-attachments/assets/9309de98-3051-4e78-b64f-da501d624d66" width="100%" height="auto" controls autoplay loop></video>
+        <video src="https://github.com/user-attachments/assets/4d39fe6a-d460-427c-a930-b7cbe0d082f5" width="100%" height="auto" controls autoplay loop></video>
         <p>CogAgent 祝你圣诞快乐，让大模型自动为你的朋友们送上圣诞祝福吧。</p>
     </div>
     <div style="text-align: center; width: 100%; max-width: 600px; height: auto;">
-        <video src="https://github.com/user-attachments/assets/53f6c39b-3785-433a-aaf8-475124dad35d" width="100%" height="auto" controls autoplay loop></video>
+        <video src="https://github.com/user-attachments/assets/87f00f97-1c4f-4152-b7c0-d145742cb910" width="100%" height="auto" controls autoplay loop></video>
         <p>想提个Issue,让 CogAgent帮你发邮件。</p>
     </div>
 </div>

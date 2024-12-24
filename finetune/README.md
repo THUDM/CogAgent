@@ -10,28 +10,19 @@ Read this in [English](README_en.md)
 
 对于数据文件，样例采用如下格式：
 
-对于 cogagent-9b-20241220 模型，您应该按照以下格式整理数据, 保证最后一轮`user` 部分包含 `image` 字段。
+对于 cogagent-9b-20241220 模型，您应该按照以下格式整理数据, 保证每一条数据都有图片并且`user`的History steps部分包括之前已有的全部操作。
 
 ```json
 {
   "messages": [
     {
       "role": "user",
-      "content": "Task: 把温度降低0.5度\n(Platform: Mobile)\n(Answer in Action-Operation-Sensitive format.)",
-      "image": null
+      "content": "Task: 通过启动台打开系统设置，导航到“网络”部分，将DNS设置手动IP地址为8.8.4.4。\n(Platform: Mac)\n(Answer in Action-Operation-Sensitive format.)\nHistory steps: \n0. CLICK(box=[[7,6,27,31]], element_info='苹果标志')\t点击屏幕左上角的“苹果”图标，以便打开系统设置。\n1. CLICK(box=[[3,77,161,99]], element_info='系统设置…')\t点击屏幕左上角菜单栏中的“系统设置…”选项，以打开系统设置界面。\n2. CLICK(box=[[7,478,125,512]], element_info='网络')\t点击左侧菜单中的“网络”选项，进入网络设置界面。\n3. CLICK(box=[[155,217,459,270]], element_info='Wi-Fi, 已连接')\t点击屏幕中间偏上的“Wi-Fi”选项，进入Wi-Fi设置界面。\n4. CLICK(box=[[405,280,447,296]], element_info='详细信息…')\t点击Wi-Fi名称旁边的“详细信息…”按钮，以查看当前Wi-Fi的详细信息。\n5. CLICK(box=[[27,344,45,362]], element_info='DNS')\t点击左侧菜单中的“DNS”选项，进入DNS设置界面。\n6. CLICK(box=[[166,308,442,399]], element_info='8.8.8.8')\t点击DNS服务器地址输入框，准备输入新的DNS服务器地址。\n7. TYPE(box=[[163,308,443,322]], text='8.8.4.4', element_info='ip地址输入框')\t在DNS服务器地址输入框中输入8.8.4.4，以设置手动IP地址。\n8. CLICK(box=[[410,636,440,651]], element_info='好')\t点击界面右下角的“好”按钮，以确认并保存DNS设置的更改。\n",
+      "image": "images/0000000000482.png"
     },
     {
       "role": "assistant",
-      "content": "Action: 左键单击\nGrounded Operation:CLICK(box=[[150,911,180,975]], element_info='降低')\n<<END>>"
-    },
-    {
-      "role": "user",
-      "content": "Task: 把温度降低0.5度\n(Platform: Mobile)\n(Answer in Action-Operation-Sensitive format.)\nHistory Step: 点击左下角的降低按钮\nCLICK(box=[[150,911,180,975]], element_info='降低')",
-      "image": "images/0000000000500/0000000000499.png"
-    },
-    {
-      "role": "assistant",
-      "content": "Action: 已经符合指令，直接结束\nGrounded Operation:END()"
+      "content": "Action: 已经完成了“通过启动台打开系统设置，导航到‘网络’部分，将DNS设置手动IP地址为8.8.4.4”这一任务，执行结束。\nGrounded Operation:END()\n<<END>>"
     }
   ]
 }

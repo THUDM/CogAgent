@@ -15,11 +15,11 @@ and execute automated device operations.
 
 <div style="display: flex; flex-direction: column; width: 100%; align-items: center; margin-top: 20px;">
     <div style="text-align: center; margin-bottom: 20px; width: 100%; max-width: 600px; height: auto;">
-        <video src="https://github.com/user-attachments/assets/9309de98-3051-4e78-b64f-da501d624d66" width="100%" height="auto" controls autoplay loop></video>
+        <video src="https://github.com/user-attachments/assets/4d39fe6a-d460-427c-a930-b7cbe0d082f5" width="100%" height="auto" controls autoplay loop></video>
         <p>CogAgent wishes you a Merry Christmas! Let the large model automatically send Christmas greetings to your friends.</p>
     </div>
     <div style="text-align: center; width: 100%; max-width: 600px; height: auto;">
-        <video src="https://github.com/user-attachments/assets/53f6c39b-3785-433a-aaf8-475124dad35d" width="100%" height="auto" controls autoplay loop></video>
+        <video src="https://github.com/user-attachments/assets/87f00f97-1c4f-4152-b7c0-d145742cb910" width="100%" height="auto" controls autoplay loop></video>
         <p>Want to open an issue? Let CogAgent help you send an email.</p>
     </div>
 </div>
