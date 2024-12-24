@@ -1,26 +1,49 @@
 # CogAgent
 
-## Model Introduction
+- 🔥 **December 2024:** We open-sourced **the latest version of the CogAgent-9B-20241220 model**. Compared to the previous version of CogAgent, `CogAgent-9B-20241220` features significant improvements in GUI perception, reasoning accuracy, action space completeness, task universality, and generalization. It supports bilingual (Chinese and English) interaction through both screen captures and natural language.
 
-### Model Resource
+- 🏆 **June 2024:** CogAgent was accepted by **CVPR 2024** and recognized as a conference Highlight (top 3%).
+
+- **December 2023:** We **open-sourced the first GUI Agent**: **CogAgent** (with the former repository available [here](https://github.com/THUDM/CogVLM)) and **published the corresponding paper: [📖 CogAgent Paper](https://arxiv.org/abs/2312.08914)**.
+  
+
+## Model Introduction
 
 |        Model         |                                                                                                                                                            Model Download Link                                                                                                                                                             | Technical Documentation                                                                                                                                                                                                                               | Online Demo                                                                        |                                                          
 |:--------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|   
-| cogagent-9b-20241220 | [🤗 HuggingFace](https://huggingface.co/THUDM/cogagent-9b-20241220)<br> [🤖 ModelScope](https://modelscope.cn/models/ZhipuAI/cogagent-9b-20241220) <br> [🟣 WiseModel](https://wisemodel.cn/models/ZhipuAI/cogagent-9b-20241220) <br>[🧩 Modelers](https://modelers.cn/models/zhipuai/cogagent-9b-20241220) (Optimized for Ascend Devices) | [📄 Technical Report](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report-en)<br/>[📘 ZhipuAI Operation Documentation(Chinese Only)](https://zhipu-ai.feishu.cn/wiki/MhPYwtpBhinuoikNIYYcyu8dnKv?fromScene=spaceOverview) | [🚀 HuggingFace Space](https://huggingface.co/spaces/THUDM-HF-SPACE/CogAgent-Demo) | 
+| cogagent-9b-20241220 | [🤗 HuggingFace](https://huggingface.co/THUDM/cogagent-9b-20241220)<br> [🤖 ModelScope](https://modelscope.cn/models/ZhipuAI/cogagent-9b-20241220) <br> [🟣 WiseModel](https://wisemodel.cn/models/ZhipuAI/cogagent-9b-20241220) <br>[🧩 Modelers](https://modelers.cn/models/zhipuai/cogagent-9b-20241220) (Optimized for Ascend Devices) | [📄 Official Technical Blog](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report-en)<br/>[📘 Operation Documentation(Chinese Only)](https://zhipu-ai.feishu.cn/wiki/MhPYwtpBhinuoikNIYYcyu8dnKv?fromScene=spaceOverview) | [🚀 HuggingFace Space](https://huggingface.co/spaces/THUDM-HF-SPACE/CogAgent-Demo) | 
 
 ### Model Overview
 
-`CogAgent-9B-20241220` model is based on [GLM-4V-9B](https://huggingface.co/THUDM/glm-4v-9b), a bilingual open-source
-VLM base model. Through data collection and optimization, multi-stage training, and strategy improvements,
-`CogAgent-9B-20241220` achieves significant advancements in GUI perception, inference prediction accuracy, action space
-completeness, and generalizability across tasks. The model supports bilingual (Chinese and English) interaction with
-both screenshots and language input.
+- `CogAgent-9B-20241220` model is based on [GLM-4V-9B](https://huggingface.co/THUDM/glm-4v-9b), a bilingual open-source VLM base model. Through data collection and optimization, multi-stage training, and strategy improvements, `CogAgent-9B-20241220` achieves significant advancements in GUI perception, inference prediction accuracy, action space completeness, and generalizability across tasks. The model supports bilingual (Chinese and English) interaction with both screenshots and language input.
+- This version of the CogAgent model has already been applied in
+ZhipuAI's [GLM-PC product](https://cogagent.aminer.cn/home). 
+- We hope the release of this model can assist researchers and developers in advancing the research and applications of GUI agents based on vision-language models.
 
-This version of the CogAgent model has already been applied in
-ZhipuAI's [GLM-PC product](https://cogagent.aminer.cn/home). We hope the release of this model can assist researchers
-and developers in advancing the research and applications of GUI agents based on vision-language models.
+**Table of Contents**
+- [CogAgent](#cogagent)
+  - [Model Introduction](#model-introduction)
+    - [Model Overview](#model-overview)
+    - [Capability Demonstrations](#capability-demonstrations)
+    - [Inference and Fine-tuning Costs](#inference-and-fine-tuning-costs)
+  - [Model Inputs and Outputs](#model-inputs-and-outputs)
+    - [User Input](#user-input)
+    - [Model Output](#model-output)
+    - [An Example](#an-example)
+    - [Notes](#notes)
+  - [Running the Model](#running-the-model)
+    - [Environment Setup](#environment-setup)
+    - [Running an Agent APP Example](#running-an-agent-app-example)
+    - [Fine-tuning the Model](#fine-tuning-the-model)
+  - [Previous Work](#previous-work)
+  - [License](#license)
+  - [Citation](#citation)
+  - [Research and Development Team \&  Acknowledgements](#research-and-development-team---acknowledgements)
+
 
 ### Capability Demonstrations
+
+The CogAgent-9b-20241220 model has achieved state-of-the-art results across multiple platforms and categories in GUI Agent tasks and GUI Grounding Benchmarks. In the [CogAgent-9b-20241220 Technical Blog](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report), we compared it against API-based commercial models (GPT-4o-20240806, Claude-3.5-Sonnet), commercial API + GUI Grounding models (GPT-4o + UGround, GPT-4o + OS-ATLAS), and open-source GUI Agent models (Qwen2-VL, ShowUI, SeeClick). The results demonstrate that **CogAgent leads in GUI localization (Screenspot), single-step operations (OmniAct), the Chinese step-wise leaderboard (CogAgentBench-basic-cn), and multi-step operations (OSWorld)**, with only a slight disadvantage in OSWorld compared to Claude-3.5-Sonnet, which specializes in Computer Use, and GPT-4o combined with external GUI Grounding models.
 
 <div style="display: flex; flex-direction: column; width: 100%; align-items: center; margin-top: 20px;">
     <div style="text-align: center; margin-bottom: 20px; width: 100%; max-width: 600px; height: auto;">
@@ -54,13 +77,56 @@ and developers in advancing the research and applications of GUI agents based on
 + The online demo link does **not** support controlling computers; it only allows you to view the model's inference
   results. We recommend deploying the model locally.
 
-## Inputs and Outputs
+## Model Inputs and Outputs
 
 `cogagent-9b-20241220` is an agent-type execution model rather than a conversational model. It does not support
-continuous dialogue, but it **does** support a continuous execution history. Below is how users should format their
-inputs and feed them to the model, and how to interpret the model’s responses.
+continuous dialogue, but it **does** support a continuous execution history. (In other words, each time a new conversation session needs to be started, and the past history should be provided to the model.) The workflow of CogAgent is illustrated as following: 
+
+<div align="center">
+    <img src=assets/cogagent_workflow_en.jpg width=70% />
+</div>
+
+**To achieve optimal GUI Agent performance, we have adopted a strict input-output format.**
+Below is how users should format their inputs and feed them to the model, and how to interpret the model’s responses.
 
 ### User Input
+
+You can refer to [app/client.py#L115](https://github.com/THUDM/CogAgent/blob/e3ca6f4dc94118d3dfb749f195cbb800ee4543ce/app/client.py#L115) for constructing user input prompts. A minimal example of user input concatenation code is shown below:
+
+``` python
+
+current_platform = identify_os() # "Mac" or "WIN" or "Mobile"
+platform_str = f"(Platform: {current_platform})\n"
+format_str = "(Answer in Action-Operation-Sensitive format.)\n" # You can use other format to replace "Action-Operation-Sensitive"
+
+history_str = "\nHistory steps: "
+for index, (grounded_op_func, action) in enumerate(zip(history_grounded_op_funcs, history_actions)):
+   history_str += f"\n{index}. {grounded_op_func}\t{action}" # start from 0. 
+
+query = f"Task: {task}{history_str}\n{platform_str}{format_str}" # Be careful about the \n
+
+```
+
+The concatenated Python string:
+
+``` python
+"Task: Search for doors, click doors on sale and filter by brands \"Mastercraft\".\nHistory steps: \n0. CLICK(box=[[352,102,786,139]], element_info='Search')\tLeft click on the search box located in the middle top of the screen next to the Menards logo.\n1. TYPE(box=[[352,102,786,139]], text='doors', element_info='Search')\tIn the search input box at the top, type 'doors'.\n2. CLICK(box=[[787,102,809,139]], element_info='SEARCH')\tLeft click on the magnifying glass icon next to the search bar to perform the search.\n3. SCROLL_DOWN(box=[[0,209,998,952]], step_count=5, element_info='[None]')\tScroll down the page to see the available doors.\n4. CLICK(box=[[280,708,710,809]], element_info='Doors on Sale')\tClick the \"Doors On Sale\" button in the middle of the page to view the doors that are currently on sale.\n(Platform: WIN)\n(Answer in Action-Operation format.)\n"
+```
+
+Printed results: 
+> 
+> Task: Search for doors, click doors on sale and filter by brands "Mastercraft".
+> History steps: 
+> 0. CLICK(box=[[352,102,786,139]], element_info='Search')  Left click on the search box located in the middle top of the screen next to the Menards logo.
+> 1. TYPE(box=[[352,102,786,139]], text='doors', element_info='Search') In the search input box at the top, type 'doors'.
+> 2. CLICK(box=[[787,102,809,139]], element_info='SEARCH')  Left click on the magnifying glass icon next to the search bar to perform the search.
+> 3. SCROLL_DOWN(box=[[0,209,998,952]], step_count=5, element_info='[None]')  Scroll down the page to see the available doors.
+> 4. CLICK(box=[[280,708,710,809]], element_info='Doors on Sale') Click the "Doors On Sale" button in the middle of the page to view the doors that are currently on sale.
+> (Platform: WIN)
+> (Answer in Action-Operation format.)
+> 
+
+If you want to understand the meaning and representation of each field in detail, please continue reading or refer to the [Practical Documentation (in Chinese), "Prompt Concatenation" section](https://zhipu-ai.feishu.cn/wiki/D9FTwQ78fitS3CkZHUjcKEWTned).
 
 1. **`task` field**  
    The user’s task description, in text format similar to a prompt. This input instructs the `cogagent-9b-20241220`
@@ -106,10 +172,10 @@ inputs and feed them to the model, and how to interpret the model’s responses.
    element type, and `element_info` describes the element. These details are wrapped within a “操作指令” (operation
    command). For the definition of the action space, please refer to [here](Action_space.md).
 
-### Example
+### An Example
 
 Suppose the user wants to mark all emails as read. The user is on a Mac, and the user wants the model to return in
-`Action-Operation-Sensitive` format. The properly concatenated prompt should be:
+`Action-Operation-Sensitive` format. The properly **concatenated prompt** should be:
 
 ```
 Task: 帮我将所有的邮件标注为已读
@@ -117,7 +183,7 @@ Task: 帮我将所有的邮件标注为已读
 (Answer in Action-Operation-Sensitive format.)
 ```
 
-Below are sample outputs for different format requirements:
+Below are **sample outputs** for different format requirements:
 
 <details>
 <summary>Answer in Action-Operation-Sensitive format</summary>
@@ -260,3 +326,27 @@ the [CogVLM & CogAgent Official Repository](https://github.com/THUDM/CogVLM).
 
 - The [Apache2.0 LICENSE](LICENSE) applies to the use of the code in this GitHub repository.
 - For the model weights, please follow the [Model License](MODEL_LICENSE).  
+
+## Citation
+
+If you find our work helpful, please consider citing the following papers
+
+```
+@misc{hong2023cogagent,
+      title={CogAgent: A Visual Language Model for GUI Agents}, 
+      author={Wenyi Hong and Weihan Wang and Qingsong Lv and Jiazheng Xu and Wenmeng Yu and Junhui Ji and Yan Wang and Zihan Wang and Yuxiao Dong and Ming Ding and Jie Tang},
+      year={2023},
+      eprint={2312.08914},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+
+```
+
+## Research and Development Team &  Acknowledgements
+
+R&D Institutions: Tsinghua University, Zhipu AI
+
+Team members: Wenyi Hong, Junhui Ji, Lihang Pan, Yuanchang Yue, Changyu Pang, Siyan Xue, Guo Wang, Weihan Wang, Jiazheng Xu, Shen Yang, Xiaotao Gu, Yuxiao Dong, Jie Tang
+
+Acknowledgement: We would like to thank the Zhipu AI data team for their strong support, including Xiaohan Zhang, Zhao Xue, Lu Chen, Jingjie Du, Siyu Wang, Ying Zhang, and all annotators. They worked hard to collect and annotate the training and testing data of the CogAgent model. We also thank Yuxuan Zhang, Xiaowei Hu, and Hao Chen from the Zhipu AI open source team for their engineering efforts in open sourcing the model.
