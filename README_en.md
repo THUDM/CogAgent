@@ -15,10 +15,23 @@
 
 ### Model Overview
 
-- `CogAgent-9B-20241220` model is based on [GLM-4V-9B](https://huggingface.co/THUDM/glm-4v-9b), a bilingual open-source VLM base model. Through data collection and optimization, multi-stage training, and strategy improvements, `CogAgent-9B-20241220` achieves significant advancements in GUI perception, inference prediction accuracy, action space completeness, and generalizability across tasks. The model supports bilingual (Chinese and English) interaction with both screenshots and language input.
-- This version of the CogAgent model has already been applied in
-ZhipuAI's [GLM-PC product](https://cogagent.aminer.cn/home). 
-- We hope the release of this model can assist researchers and developers in advancing the research and applications of GUI agents based on vision-language models.
+`CogAgent-9B-20241220` model is based on [GLM-4V-9B](https://huggingface.co/THUDM/glm-4v-9b), a bilingual open-source VLM base model. Through data collection and optimization, multi-stage training, and strategy improvements, `CogAgent-9B-20241220` achieves significant advancements in GUI perception, inference prediction accuracy, action space completeness, and generalizability across tasks. The model supports bilingual (Chinese and English) interaction with both screenshots and language input. This version of the CogAgent model has already been applied in ZhipuAI's [GLM-PC product](https://cogagent.aminer.cn/home). We hope the release of this model can assist researchers and developers in advancing the research and applications of GUI agents based on vision-language models.
+
+### Capability Demonstrations
+
+The CogAgent-9b-20241220 model has achieved state-of-the-art results across multiple platforms and categories in GUI Agent tasks and GUI Grounding Benchmarks. In the [CogAgent-9b-20241220 Technical Blog](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report), we compared it against API-based commercial models (GPT-4o-20240806, Claude-3.5-Sonnet), commercial API + GUI Grounding models (GPT-4o + UGround, GPT-4o + OS-ATLAS), and open-source GUI Agent models (Qwen2-VL, ShowUI, SeeClick). The results demonstrate that **CogAgent leads in GUI localization (Screenspot), single-step operations (OmniAct), the Chinese step-wise leaderboard (CogAgentBench-basic-cn), and multi-step operations (OSWorld)**, with only a slight disadvantage in OSWorld compared to Claude-3.5-Sonnet, which specializes in Computer Use, and GPT-4o combined with external GUI Grounding models.
+
+<div style="display: flex; flex-direction: column; width: 100%; align-items: center; margin-top: 20px;">
+    <div style="text-align: center; margin-bottom: 20px; width: 100%; max-width: 600px; height: auto;">
+        <video src="https://github.com/user-attachments/assets/4d39fe6a-d460-427c-a930-b7cbe0d082f5" width="100%" height="auto" controls autoplay loop></video>
+        <p>CogAgent wishes you a Merry Christmas! Let the large model automatically send Christmas greetings to your friends.</p>
+    </div>
+    <div style="text-align: center; width: 100%; max-width: 600px; height: auto;">
+        <video src="https://github.com/user-attachments/assets/87f00f97-1c4f-4152-b7c0-d145742cb910" width="100%" height="auto" controls autoplay loop></video>
+        <p>Want to open an issue? Let CogAgent help you send an email.</p>
+    </div>
+</div>
+
 
 **Table of Contents**
 - [CogAgent](#cogagent)
@@ -39,22 +52,6 @@ ZhipuAI's [GLM-PC product](https://cogagent.aminer.cn/home).
   - [License](#license)
   - [Citation](#citation)
   - [Research and Development Team \&  Acknowledgements](#research-and-development-team---acknowledgements)
-
-
-### Capability Demonstrations
-
-The CogAgent-9b-20241220 model has achieved state-of-the-art results across multiple platforms and categories in GUI Agent tasks and GUI Grounding Benchmarks. In the [CogAgent-9b-20241220 Technical Blog](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report), we compared it against API-based commercial models (GPT-4o-20240806, Claude-3.5-Sonnet), commercial API + GUI Grounding models (GPT-4o + UGround, GPT-4o + OS-ATLAS), and open-source GUI Agent models (Qwen2-VL, ShowUI, SeeClick). The results demonstrate that **CogAgent leads in GUI localization (Screenspot), single-step operations (OmniAct), the Chinese step-wise leaderboard (CogAgentBench-basic-cn), and multi-step operations (OSWorld)**, with only a slight disadvantage in OSWorld compared to Claude-3.5-Sonnet, which specializes in Computer Use, and GPT-4o combined with external GUI Grounding models.
-
-<div style="display: flex; flex-direction: column; width: 100%; align-items: center; margin-top: 20px;">
-    <div style="text-align: center; margin-bottom: 20px; width: 100%; max-width: 600px; height: auto;">
-        <video src="https://github.com/user-attachments/assets/4d39fe6a-d460-427c-a930-b7cbe0d082f5" width="100%" height="auto" controls autoplay loop></video>
-        <p>CogAgent wishes you a Merry Christmas! Let the large model automatically send Christmas greetings to your friends.</p>
-    </div>
-    <div style="text-align: center; width: 100%; max-width: 600px; height: auto;">
-        <video src="https://github.com/user-attachments/assets/87f00f97-1c4f-4152-b7c0-d145742cb910" width="100%" height="auto" controls autoplay loop></video>
-        <p>Want to open an issue? Let CogAgent help you send an email.</p>
-    </div>
-</div>
 
 ### Inference and Fine-tuning Costs
 
@@ -83,7 +80,7 @@ The CogAgent-9b-20241220 model has achieved state-of-the-art results across mult
 continuous dialogue, but it **does** support a continuous execution history. (In other words, each time a new conversation session needs to be started, and the past history should be provided to the model.) The workflow of CogAgent is illustrated as following: 
 
 <div align="center">
-    <img src=assets/cogagent_workflow_en.jpg width=70% />
+    <img src=assets/cogagent_workflow_en.png width=90% />
 </div>
 
 **To achieve optimal GUI Agent performance, we have adopted a strict input-output format.**
@@ -95,7 +92,7 @@ You can refer to [app/client.py#L115](https://github.com/THUDM/CogAgent/blob/e3c
 
 ``` python
 
-current_platform = identify_os() # "Mac" or "WIN" or "Mobile"
+current_platform = identify_os() # "Mac" or "WIN" or "Mobile". Pay attention to case sensitivity.
 platform_str = f"(Platform: {current_platform})\n"
 format_str = "(Answer in Action-Operation-Sensitive format.)\n" # You can use other format to replace "Action-Operation-Sensitive"
 
@@ -345,8 +342,8 @@ If you find our work helpful, please consider citing the following papers
 
 ## Research and Development Team &  Acknowledgements
 
-R&D Institutions: Tsinghua University, Zhipu AI
+**R&D Institutions**: Tsinghua University, Zhipu AI
 
-Team members: Wenyi Hong, Junhui Ji, Lihang Pan, Yuanchang Yue, Changyu Pang, Siyan Xue, Guo Wang, Weihan Wang, Jiazheng Xu, Shen Yang, Xiaotao Gu, Yuxiao Dong, Jie Tang
+**Team members**: Wenyi Hong, Junhui Ji, Lihang Pan, Yuanchang Yue, Changyu Pang, Siyan Xue, Guo Wang, Weihan Wang, Jiazheng Xu, Shen Yang, Xiaotao Gu, Yuxiao Dong, Jie Tang
 
-Acknowledgement: We would like to thank the Zhipu AI data team for their strong support, including Xiaohan Zhang, Zhao Xue, Lu Chen, Jingjie Du, Siyu Wang, Ying Zhang, and all annotators. They worked hard to collect and annotate the training and testing data of the CogAgent model. We also thank Yuxuan Zhang, Xiaowei Hu, and Hao Chen from the Zhipu AI open source team for their engineering efforts in open sourcing the model.
+**Acknowledgement**: We would like to thank the Zhipu AI data team for their strong support, including Xiaohan Zhang, Zhao Xue, Lu Chen, Jingjie Du, Siyu Wang, Ying Zhang, and all annotators. They worked hard to collect and annotate the training and testing data of the CogAgent model. We also thank Yuxuan Zhang, Xiaowei Hu, and Hao Chen from the Zhipu AI open source team for their engineering efforts in open sourcing the model.

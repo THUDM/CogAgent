@@ -16,10 +16,23 @@ Read this in [English](README_en.md)
 
 ### 模型简介
  
-- `CogAgent-9B-20241220` 模型基于 [GLM-4V-9B](https://huggingface.co/THUDM/glm-4v-9b) 双语开源VLM基座模型。通过数据的采集与优化、多阶段训练与策略改进等方法，`CogAgent-9B-20241220` 在GUI感知、推理预测准确性、动作空间完善性、任务的普适和泛化性上得到了大幅提升，能够接受中英文双语的屏幕截图和语言交互。
-- 此版CogAgent模型已被应用于智谱AI的 [GLM-PC产品](https://cogagent.aminer.cn/home)。
-- 我们希望这版模型的发布能够帮助到学术研究者们和开发者们，一起推进基于视觉语言模型的 GUI agent 的研究和应用。
+`CogAgent-9B-20241220` 模型基于 [GLM-4V-9B](https://huggingface.co/THUDM/glm-4v-9b) 双语开源VLM基座模型。通过数据的采集与优化、多阶段训练与策略改进等方法，`CogAgent-9B-20241220` 在GUI感知、推理预测准确性、动作空间完善性、任务的普适和泛化性上得到了大幅提升，能够接受中英文双语的屏幕截图和语言交互。此版CogAgent模型已被应用于智谱AI的 [GLM-PC产品](https://cogagent.aminer.cn/home)。我们希望这版模型的发布能够帮助到学术研究者们和开发者们，一起推进基于视觉语言模型的 GUI agent 的研究和应用。
 
+
+### 能力展示
+
+CogAgent-9b-20241220 模型在多平台、多类别的GUI Agent及GUI Grounding Benchmarks上取得了当前最优的结果。在 [CogAgent-9b-20241220 技术博客](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report) 中，我们对比了基于API的商业模型（GPT-4o-20240806、Claude-3.5-Sonnet）、商业API + GUI Grounding模型（GPT-4o + UGround、GPT-4o + OS-ATLAS）、开源GUI Agent模型（Qwen2-VL、ShowUI、SeeClick）。结果表明，**CogAgent在GUI定位（Screenspot）、单步操作（OmniAct）、中文step-wise榜单（CogAgentBench-basic-cn）、多步操作（OSWorld）都取得了领先的结果**，仅在OSworld上略逊于针对Computer Use特化的Claude-3.5-Sonnet和结合外接 GUI Grounding Model 的GPT-4o。
+
+<div style="display: flex; flex-direction: column; width: 100%; align-items: center; margin-top: 20px;">
+    <div style="text-align: center; margin-bottom: 20px; width: 100%; max-width: 600px; height: auto;">
+        <video src="https://github.com/user-attachments/assets/4d39fe6a-d460-427c-a930-b7cbe0d082f5" width="100%" height="auto" controls autoplay loop></video>
+        <p style="color: gray; font-size: 12px; text-align: center;">CogAgent 祝你圣诞快乐，让大模型自动为你的朋友们送上圣诞祝福吧。</p>
+    </div>
+    <div style="text-align: center; width: 100%; max-width: 600px; height: auto;">
+        <video src="https://github.com/user-attachments/assets/87f00f97-1c4f-4152-b7c0-d145742cb910" width="100%" height="auto" controls autoplay loop></video>
+        <p style="color: gray; font-size: 12px; text-align: center;">想提个Issue,让 CogAgent帮你发邮件。</p>
+    </div>
+</div>
 
 **文档目录**
 - [CogAgent](#cogagent)
@@ -43,21 +56,6 @@ Read this in [English](README_en.md)
   - [研发团队 \& 致谢](#研发团队--致谢)
 
 
-### 能力展示
-
-CogAgent-9b-20241220 模型在多平台、多类别的GUI Agent及GUI Grounding Benchmarks上取得了当前最优的结果。在 [CogAgent-9b-20241220 技术博客](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report) 中，我们对比了基于API的商业模型（GPT-4o-20240806、Claude-3.5-Sonnet）、商业API + GUI Grounding模型（GPT-4o + UGround、GPT-4o + OS-ATLAS）、开源GUI Agent模型（Qwen2-VL、ShowUI、SeeClick）。结果表明，**CogAgent在GUI定位（Screenspot）、单步操作（OmniAct）、中文step-wise榜单（CogAgentBench-basic-cn）、多步操作（OSWorld）都取得了领先的结果**，仅在OSworld上略逊于针对Computer Use特化的Claude-3.5-Sonnet和结合外接 GUI Grounding Model 的GPT-4o。
-
-<div style="display: flex; flex-direction: column; width: 100%; align-items: center; margin-top: 20px;">
-    <div style="text-align: center; margin-bottom: 20px; width: 100%; max-width: 600px; height: auto;">
-        <video src="https://github.com/user-attachments/assets/4d39fe6a-d460-427c-a930-b7cbe0d082f5" width="100%" height="auto" controls autoplay loop></video>
-        <p>CogAgent 祝你圣诞快乐，让大模型自动为你的朋友们送上圣诞祝福吧。</p>
-    </div>
-    <div style="text-align: center; width: 100%; max-width: 600px; height: auto;">
-        <video src="https://github.com/user-attachments/assets/87f00f97-1c4f-4152-b7c0-d145742cb910" width="100%" height="auto" controls autoplay loop></video>
-        <p>想提个Issue,让 CogAgent帮你发邮件。</p>
-    </div>
-</div>
-
 
 ### 推理和微调成本
 
@@ -77,7 +75,7 @@ CogAgent-9b-20241220 模型在多平台、多类别的GUI Agent及GUI Grounding 
 `cogagent-9b-20241220`是一个Agent类执行模型而非对话模型，不支持连续对话，但支持连续的执行历史（也即，每次需要重开对话session，并将过往的历史给模型）。CogAgent的工作流如下图所示：
 
 <div align="center">
-    <img src=assets/cogagent_workflow_cn.jpg width=70% />
+    <img src=assets/cogagent_workflow_cn.png width=90% />
 </div>
 
 **为了达到最佳的 GUI Agent 性能，我们采用了严格的输入输出格式**。
@@ -89,7 +87,7 @@ CogAgent-9b-20241220 模型在多平台、多类别的GUI Agent及GUI Grounding 
 
 ``` python
 
-current_platform = identify_os() # "Mac" or "WIN" or "Mobile"
+current_platform = identify_os() # "Mac" or "WIN" or "Mobile"，注意大小写
 platform_str = f"(Platform: {current_platform})\n"
 format_str = "(Answer in Action-Operation-Sensitive format.)\n" # You can use other format to replace "Action-Operation-Sensitive"
 
@@ -331,8 +329,8 @@ python inference/web_demo.py --host 0.0.0.0 --port 7860 --model_dir THUDM/cogage
 
 ## 研发团队 & 致谢
 
-研发机构：清华大学，智谱AI
+**研发机构**：清华大学，智谱AI
 
-团队成员：洪文逸，纪骏辉，潘立航，岳远昌，庞常毓，薛思言，王果，王维汉，胥嘉政，杨慎，顾晓韬，东昱晓，唐杰
+**团队成员**：洪文逸，纪骏辉，潘立航，岳远昌，庞常毓，薛思言，王果，王维汉，胥嘉政，杨慎，顾晓韬，东昱晓，唐杰
 
-致谢：我们感谢智谱 AI 数据团队的大力的支持，包括张笑涵、薛钊、陈陆、杜竟杰、王思瑜、张颖，以及所有的标注员。他们为 CogAgent 模型的训练和测试数据的收集、标注付出了艰辛的工作。我们同时感谢智谱AI开源团队张昱轩、胡晓伟、陈浩为模型开源付出的工程努力。
+**致谢**：我们感谢智谱 AI 数据团队的大力的支持，包括张笑涵、薛钊、陈陆、杜竟杰、王思瑜、张颖，以及所有的标注员。他们为 CogAgent 模型的训练和测试数据的收集、标注付出了艰辛的工作。我们同时感谢智谱AI开源团队张昱轩、胡晓伟、陈浩为模型开源付出的工程努力。
