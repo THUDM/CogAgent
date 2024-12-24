@@ -21,7 +21,7 @@ Read this in [English](README.md)
 
 ### 能力展示
 
-CogAgent-9b-20241220 模型在多平台、多类别的GUI Agent及GUI Grounding Benchmarks上取得了当前最优的结果。在 [CogAgent-9b-20241220 技术博客](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report) 中，我们对比了基于API的商业模型（GPT-4o-20240806、Claude-3.5-Sonnet）、商业API + GUI Grounding模型（GPT-4o + UGround、GPT-4o + OS-ATLAS）、开源GUI Agent模型（Qwen2-VL、ShowUI、SeeClick）。结果表明，**CogAgent在GUI定位（Screenspot）、单步操作（OmniAct）、中文step-wise榜单（CogAgentBench-basic-cn）、多步操作（OSWorld）都取得了领先的结果**，仅在OSworld上略逊于针对Computer Use特化的Claude-3.5-Sonnet和结合外接 GUI Grounding Model 的GPT-4o。
+CogAgent-9b-20241220 模型在多平台、多类别的GUI Agent及GUI Grounding Benchmarks上取得了当前最优的结果。在 [CogAgent-9b-20241220 技术博客](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report) 中，我们对比了基于API的商业模型（GPT-4o-20240806、Claude-3.5-Sonnet）、商业API + GUI Grounding模型（GPT-4o + UGround、GPT-4o + OS-ATLAS）、开源GUI Agent模型（Qwen2-VL、ShowUI、SeeClick）。结果表明，**CogAgent在GUI定位（Screenspot）、单步操作（OmniAct）、中文step-wise内部评测榜单（CogAgentBench-basic-cn）、多步操作（OSWorld）都取得了领先的结果**，仅在OSworld上略逊于针对Computer Use特化的Claude-3.5-Sonnet和结合外接 GUI Grounding Model 的GPT-4o。
 
 <div style="display: flex; flex-direction: column; width: 100%; align-items: center; margin-top: 20px;">
     <div style="text-align: center; margin-bottom: 20px; width: 100%; max-width: 600px; height: auto;">
