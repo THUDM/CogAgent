@@ -11,8 +11,22 @@ different roles to calculate the `loss` for multiple rounds of replies in one ca
 For the data file, the sample uses the following format:
 
 For the cogagent-9b-20241220 model, you should organize the data in the following format, ensuring that each data entry has an image and the History steps section of `user` includes all previous operations.
+The first piece of data below is an intermediate step, and the model will return <<general operation>>, etc. The second piece of data is the complete process, and the model will return <<END>>.
 
 ```json
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Task: In the Desktop & Dock section of System Settings, turn on the option "Displays have separate Spaces" in the Mission Control section\n(Platform: Mac)\n(Answer in Action-Operation-Sensitive format.)\nHistory steps: \n0. CLICK(box=[[588,946,616,985]], element_info='System Settings')\tClick the "System Settings" menu at the bottom of the screen to open System Settings\n1. CLICK(box=[[227,561,297,585]], element_info='Desktop & Dock')\tClick the "Desktop & Dock" option in the left menu to enter the Desktop & Dock settings interface. \n2. SCROLL_DOWN(box=[[367,39,691,929]], step_count=75, element_info='Scroll')\tIn the scroll area on the right side of the current screen, scroll down to view more options. \n",
+      "image": "images/0000000000336.png"
+    },
+    {
+      "role": "assistant",
+      "content": "Action: Click the "Displays have separate spaces" option in the "Schedule Center" section to enable this feature. \nGrounded Operation:CLICK(box=[[655,842,671,857]], element_info='"Displays have separate spaces" switch button')\n<<General Operation>>"
+    }
+  ]
+},
 {
   "messages": [
     {

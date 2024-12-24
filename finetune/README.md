@@ -11,8 +11,22 @@ Read this in [English](README_en.md)
 对于数据文件，样例采用如下格式：
 
 对于 cogagent-9b-20241220 模型，您应该按照以下格式整理数据, 保证每一条数据都有图片并且`user`的History steps部分包括之前已有的全部操作。
+以下第一条数据是中间步骤，模型会返回<<一般操作>>等，第二条数据是完整过程，模型会返回<<END>>。
 
 ```json
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "Task: 在系统设置的桌面与程序坞部分，开启调度中心板块中“显示器具有单独空间”的选项\n(Platform: Mac)\n(Answer in Action-Operation-Sensitive format.)\nHistory steps: \n0. CLICK(box=[[588,946,616,985]], element_info='系统设置')\t点击屏幕下方的“系统设置”菜单，从而打开系统设置\n1. CLICK(box=[[227,561,297,585]], element_info='桌面与程序坞')\t点击左侧菜单中的“桌面与程序坞”选项，进入桌面与程序坞的设置界面。\n2. SCROLL_DOWN(box=[[367,39,691,929]], step_count=75, element_info='滚动')\t在当前屏幕的右侧滚动区域中，向下滚动以查看更多选项。\n",
+      "image": "images/0000000000336.png"
+    },
+    {
+      "role": "assistant",
+      "content": "Action: 点击“调度中心”板块中的“显示器具有单独空间”选项，从而开启该功能。\nGrounded Operation:CLICK(box=[[655,842,671,857]], element_info='“显示器具有单独空间”的开关按钮')\n<<一般操作>>"
+    }
+  ]
+},
 {
   "messages": [
     {
