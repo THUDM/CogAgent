@@ -2,26 +2,35 @@
 
 Read this in [English](README.md)
 
-- 🔥 **2024.12** 我们开源了**最新版 CogAgent-9B-20241220 模型**。相较于上一版本CogAgent，`CogAgent-9B-20241220` 在GUI感知、推理预测准确性、动作空间完善性、任务的普适和泛化性上得到了大幅提升，能够接受中英文双语的屏幕截图和语言交互。
+- 🔥 **2024.12** 我们开源了**最新版 CogAgent-9B-20241220 模型**。相较于上一版本CogAgent，`CogAgent-9B-20241220`
+  在GUI感知、推理预测准确性、动作空间完善性、任务的普适和泛化性上得到了大幅提升，能够接受中英文双语的屏幕截图和语言交互。
 - 🏆 **2024.6** CogAgent 被 CVPR2024 接收，并被评为大会 Highlight（前3%） 。
-- 2023.12 我们**开源了首个GUI Agent：CogAgent**（该版本仓库位于[这里](https://github.com/THUDM/CogVLM)），并**发布了对应论文 📖 [CogAgent论文](https://arxiv.org/abs/2312.08914)**。
+- 2023.12 我们**开源了首个GUI Agent：CogAgent**（该版本仓库位于[这里](https://github.com/THUDM/CogVLM)），并**发布了对应论文
+  📖 [CogAgent论文](https://arxiv.org/abs/2312.08914)**。
 
 ## 关于模型
 
 ### 模型资源
 
-|        Model         |                                                                                                                                                       模型下载地址                                                                                                                                                        | 技术文档                                                                                                                                                                                              | 在线体验                                                                                                                                                  |                                                          
-|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|   
-| cogagent-9b-20241220 | [🤗 HuggingFace](https://huggingface.co/THUDM/cogagent-9b-20241220)<br> [🤖 ModelScope](https://modelscope.cn/models/ZhipuAI/cogagent-9b-20241220) <br> [🟣 WiseModel](https://wisemodel.cn/models/ZhipuAI/cogagent-9b-20241220) <br>[🧩 Modelers](https://modelers.cn/models/zhipuai/cogagent-9b-20241220)(昇腾设备优化) | [📄 官方技术博客](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report)<br/>[📘 实操文档（中文）](https://zhipu-ai.feishu.cn/wiki/MhPYwtpBhinuoikNIYYcyu8dnKv?fromScene=spaceOverview) | [🤗 HuggingFace Space](https://huggingface.co/spaces/THUDM-HF-SPACE/CogAgent-Demo)<br/>[🧩 Modelers Space(昇腾设备优化)](https://modelers.cn/spaces/zhipuai/CogAgent) | 
+|        Model         |                                                                                                                                                     模型下载地址                                                                                                                                                      | 技术文档                                                                                                                                                                                                | 在线体验                                                                                                                                                        |                                                          
+|:--------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|   
+| cogagent-9b-20241220 | [🤗 HuggingFace](https://huggingface.co/THUDM/cogagent-9b-20241220)<br> [🤖 ModelScope](https://modelscope.cn/models/ZhipuAI/cogagent-9b-20241220) <br> [🟣 WiseModel](https://wisemodel.cn/models/ZhipuAI/cogagent-9b-20241220) <br>[🧩 Modelers(昇腾)](https://modelers.cn/models/zhipuai/cogagent-9b-20241220) | [📄 官方技术博客](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report)<br/>[📘 实操文档（中文）](https://zhipu-ai.feishu.cn/wiki/MhPYwtpBhinuoikNIYYcyu8dnKv?fromScene=spaceOverview) | [🤗 HuggingFace Space](https://huggingface.co/spaces/THUDM-HF-SPACE/CogAgent-Demo)<br/>[🧩 Modelers Space(昇腾)](https://modelers.cn/spaces/zhipuai/CogAgent) | 
 
 ### 模型简介
- 
-`CogAgent-9B-20241220` 模型基于 [GLM-4V-9B](https://huggingface.co/THUDM/glm-4v-9b) 双语开源VLM基座模型。通过数据的采集与优化、多阶段训练与策略改进等方法，`CogAgent-9B-20241220` 在GUI感知、推理预测准确性、动作空间完善性、任务的普适和泛化性上得到了大幅提升，能够接受中英文双语的屏幕截图和语言交互。此版CogAgent模型已被应用于智谱AI的 [GLM-PC产品](https://cogagent.aminer.cn/home)。我们希望这版模型的发布能够帮助到学术研究者们和开发者们，一起推进基于视觉语言模型的 GUI agent 的研究和应用。
 
+`CogAgent-9B-20241220` 模型基于 [GLM-4V-9B](https://huggingface.co/THUDM/glm-4v-9b)
+双语开源VLM基座模型。通过数据的采集与优化、多阶段训练与策略改进等方法，`CogAgent-9B-20241220`
+在GUI感知、推理预测准确性、动作空间完善性、任务的普适和泛化性上得到了大幅提升，能够接受中英文双语的屏幕截图和语言交互。此版CogAgent模型已被应用于智谱AI的 [GLM-PC产品](https://cogagent.aminer.cn/home)
+。我们希望这版模型的发布能够帮助到学术研究者们和开发者们，一起推进基于视觉语言模型的 GUI agent 的研究和应用。
 
 ### 能力展示
 
-CogAgent-9b-20241220 模型在多平台、多类别的GUI Agent及GUI Grounding Benchmarks上取得了当前最优的结果。在 [CogAgent-9b-20241220 技术博客](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report) 中，我们对比了基于API的商业模型（GPT-4o-20240806、Claude-3.5-Sonnet）、商业API + GUI Grounding模型（GPT-4o + UGround、GPT-4o + OS-ATLAS）、开源GUI Agent模型（Qwen2-VL、ShowUI、SeeClick）。结果表明，**CogAgent在GUI定位（Screenspot）、单步操作（OmniAct）、中文step-wise内部评测榜单（CogAgentBench-basic-cn）、多步操作（OSWorld）都取得了领先的结果**，仅在OSworld上略逊于针对Computer Use特化的Claude-3.5-Sonnet和结合外接 GUI Grounding Model 的GPT-4o。
+CogAgent-9b-20241220 模型在多平台、多类别的GUI Agent及GUI Grounding
+Benchmarks上取得了当前最优的结果。在 [CogAgent-9b-20241220 技术博客](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report)
+中，我们对比了基于API的商业模型（GPT-4o-20240806、Claude-3.5-Sonnet）、商业API + GUI Grounding模型（GPT-4o + UGround、GPT-4o +
+OS-ATLAS）、开源GUI Agent模型（Qwen2-VL、ShowUI、SeeClick）。结果表明，*
+*CogAgent在GUI定位（Screenspot）、单步操作（OmniAct）、中文step-wise内部评测榜单（CogAgentBench-basic-cn）、多步操作（OSWorld）都取得了领先的结果
+**，仅在OSworld上略逊于针对Computer Use特化的Claude-3.5-Sonnet和结合外接 GUI Grounding Model 的GPT-4o。
 
 <div style="display: flex; flex-direction: column; width: 100%; align-items: center; margin-top: 20px;">
     <div style="text-align: center; margin-bottom: 20px; width: 100%; max-width: 600px; height: auto;">
@@ -35,25 +44,26 @@ CogAgent-9b-20241220 模型在多平台、多类别的GUI Agent及GUI Grounding 
 </div>
 
 **文档目录**
+
 - [CogAgent](#cogagent)
-  - [关于模型](#关于模型)
-    - [模型资源](#模型资源)
-    - [模型简介](#模型简介)
-    - [能力展示](#能力展示)
-    - [推理和微调成本](#推理和微调成本)
-  - [模型输入和输出](#模型输入和输出)
-    - [用户输入部分](#用户输入部分)
-    - [模型返回部分](#模型返回部分)
-    - [一个例子](#一个例子)
-    - [注意事项](#注意事项)
-  - [运行模型](#运行模型)
-    - [环境配置](#环境配置)
-    - [运行 Agent APP 示例](#运行-agent-app-示例)
-    - [微调模型](#微调模型)
-  - [先前的工作](#先前的工作)
-  - [协议](#协议)
-  - [引用](#引用)
-  - [研发团队 \& 致谢](#研发团队--致谢)
+    - [关于模型](#关于模型)
+        - [模型资源](#模型资源)
+        - [模型简介](#模型简介)
+        - [能力展示](#能力展示)
+        - [推理和微调成本](#推理和微调成本)
+    - [模型输入和输出](#模型输入和输出)
+        - [用户输入部分](#用户输入部分)
+        - [模型返回部分](#模型返回部分)
+        - [一个例子](#一个例子)
+        - [注意事项](#注意事项)
+    - [运行模型](#运行模型)
+        - [环境配置](#环境配置)
+        - [运行 Agent APP 示例](#运行-agent-app-示例)
+        - [微调模型](#微调模型)
+    - [先前的工作](#先前的工作)
+    - [协议](#协议)
+    - [引用](#引用)
+    - [研发团队 \& 致谢](#研发团队--致谢)
 
 ### 推理和微调成本
 
@@ -81,7 +91,8 @@ CogAgent-9b-20241220 模型在多平台、多类别的GUI Agent及GUI Grounding 
 
 ### 用户输入部分
 
-您可以参考 [app/client.py#L115](https://github.com/THUDM/CogAgent/blob/e3ca6f4dc94118d3dfb749f195cbb800ee4543ce/app/client.py#L115)拼接用户输入提示词。一个最简用户输入拼接代码如下所示：
+您可以参考 [app/client.py#L115](https://github.com/THUDM/CogAgent/blob/e3ca6f4dc94118d3dfb749f195cbb800ee4543ce/app/client.py#L115)
+拼接用户输入提示词。一个最简用户输入拼接代码如下所示：
 
 ``` python
 
@@ -104,17 +115,22 @@ query = f"Task: {task}{history_str}\n{platform_str}{format_str}" # Be careful ab
 ```
 
 打印结果如下所示：
-> 
+>
 > Task: Search for doors, click doors on sale and filter by brands "Mastercraft".
-> History steps: 
-> 0. CLICK(box=[[352,102,786,139]], element_info='Search')  Left click on the search box located in the middle top of the screen next to the Menards logo.
-> 1. TYPE(box=[[352,102,786,139]], text='doors', element_info='Search') In the search input box at the top, type 'doors'.
-> 2. CLICK(box=[[787,102,809,139]], element_info='SEARCH')  Left click on the magnifying glass icon next to the search bar to perform the search.
-> 3. SCROLL_DOWN(box=[[0,209,998,952]], step_count=5, element_info='[None]')  Scroll down the page to see the available doors.
-> 4. CLICK(box=[[280,708,710,809]], element_info='Doors on Sale') Click the "Doors On Sale" button in the middle of the page to view the doors that are currently on sale.
-> (Platform: WIN)
-> (Answer in Action-Operation format.)
-> 
+> History steps:
+> 0. CLICK(box=[[352,102,786,139]], element_info='Search')  Left click on the search box located in the middle top of
+     the screen next to the Menards logo.
+> 1. TYPE(box=[[352,102,786,139]], text='doors', element_info='Search') In the search input box at the top, type '
+     doors'.
+> 2. CLICK(box=[[787,102,809,139]], element_info='SEARCH')  Left click on the magnifying glass icon next to the search
+     bar to perform the search.
+> 3. SCROLL_DOWN(box=[[0,209,998,952]], step_count=5, element_info='[None]')  Scroll down the page to see the available
+     doors.
+> 4. CLICK(box=[[280,708,710,809]], element_info='Doors on Sale') Click the "Doors On Sale" button in the middle of the
+     page to view the doors that are currently on sale.
+     > (Platform: WIN)
+     > (Answer in Action-Operation format.)
+>
 
 若您想仔细了解每个字段的含义和表示，请继续阅读或是参考 [实操文档（中文）的“提示词拼接”章节](https://zhipu-ai.feishu.cn/wiki/D9FTwQ78fitS3CkZHUjcKEWTned)。
 
@@ -331,4 +347,5 @@ python inference/web_demo.py --host 0.0.0.0 --port 7860 --model_dir THUDM/cogage
 
 **团队成员**：洪文逸，纪骏辉，潘立航，岳远昌，庞常毓，薛思言，王果，王维汉，胥嘉政，杨慎，顾晓韬，东昱晓，唐杰
 
-**致谢**：我们感谢智谱 AI 数据团队的大力的支持，包括张笑涵、薛钊、陈陆、杜竟杰、王思瑜、张颖，以及所有的标注员。他们为 CogAgent 模型的训练和测试数据的收集、标注付出了艰辛的工作。我们同时感谢智谱AI开源团队张昱轩、胡晓伟、陈浩为模型开源付出的工程努力。
+**致谢**：我们感谢智谱 AI 数据团队的大力的支持，包括张笑涵、薛钊、陈陆、杜竟杰、王思瑜、张颖，以及所有的标注员。他们为 CogAgent
+模型的训练和测试数据的收集、标注付出了艰辛的工作。我们同时感谢智谱AI开源团队张昱轩、胡晓伟、陈浩为模型开源付出的工程努力。
