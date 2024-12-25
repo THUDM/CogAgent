@@ -135,10 +135,12 @@ The concatenated Python string:
 "Task: Search for doors, click doors on sale and filter by brands \"Mastercraft\".\nHistory steps: \n0. CLICK(box=[[352,102,786,139]], element_info='Search')\tLeft click on the search box located in the middle top of the screen next to the Menards logo.\n1. TYPE(box=[[352,102,786,139]], text='doors', element_info='Search')\tIn the search input box at the top, type 'doors'.\n2. CLICK(box=[[787,102,809,139]], element_info='SEARCH')\tLeft click on the magnifying glass icon next to the search bar to perform the search.\n3. SCROLL_DOWN(box=[[0,209,998,952]], step_count=5, element_info='[None]')\tScroll down the page to see the available doors.\n4. CLICK(box=[[280,708,710,809]], element_info='Doors on Sale')\tClick the \"Doors On Sale\" button in the middle of the page to view the doors that are currently on sale.\n(Platform: WIN)\n(Answer in Action-Operation format.)\n"
 ```
 
-Printed results:
+Printed prompt:
 >
 > Task: Search for doors, click doors on sale and filter by brands "Mastercraft".
+>
 > History steps:
+>
 > 0. CLICK(box=[[352,102,786,139]], element_info='Search')  Left click on the search box located in the middle top of
      the screen next to the Menards logo.
 > 1. TYPE(box=[[352,102,786,139]], text='doors', element_info='Search') In the search input box at the top, type '
@@ -149,8 +151,10 @@ Printed results:
      doors.
 > 4. CLICK(box=[[280,708,710,809]], element_info='Doors on Sale') Click the "Doors On Sale" button in the middle of the
      page to view the doors that are currently on sale.
-     > (Platform: WIN)
-     > (Answer in Action-Operation format.)
+>    
+> (Platform: WIN)
+>
+> (Answer in Action-Operation format.)
 >
 
 If you want to understand the meaning and representation of each field in detail, please continue reading or refer to
