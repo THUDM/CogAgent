@@ -185,11 +185,12 @@ query = f"Task: {task}{history_str}\n{platform_str}{format_str}" # Be careful ab
 
 ```
 Task: 帮我将所有的邮件标注为已读
+History steps:
 (Platform: Mac)
 (Answer in Action-Operation-Sensitive format.)
 ```
 
-接着，这里展现了不同格式要求下的**返回结果**:
+注意，即使没有操作历史，也需要在 prompt 中拼接上“History steps:”。接着，这里展现了不同格式要求下的**返回结果**:
 
 
 <details>
