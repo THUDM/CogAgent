@@ -117,7 +117,9 @@ query = f"Task: {task}{history_str}\n{platform_str}{format_str}" # Be careful ab
 打印结果如下所示：
 >
 > Task: Search for doors, click doors on sale and filter by brands "Mastercraft".
+>
 > History steps:
+>
 > 0. CLICK(box=[[352,102,786,139]], element_info='Search')  Left click on the search box located in the middle top of
      the screen next to the Menards logo.
 > 1. TYPE(box=[[352,102,786,139]], text='doors', element_info='Search') In the search input box at the top, type '
@@ -128,8 +130,10 @@ query = f"Task: {task}{history_str}\n{platform_str}{format_str}" # Be careful ab
      doors.
 > 4. CLICK(box=[[280,708,710,809]], element_info='Doors on Sale') Click the "Doors On Sale" button in the middle of the
      page to view the doors that are currently on sale.
-     > (Platform: WIN)
-     > (Answer in Action-Operation format.)
+>    
+> (Platform: WIN)
+>
+> (Answer in Action-Operation format.)
 >
 
 若您想仔细了解每个字段的含义和表示，请继续阅读或是参考 [实操文档（中文）的“提示词拼接”章节](https://zhipu-ai.feishu.cn/wiki/D9FTwQ78fitS3CkZHUjcKEWTned)。
