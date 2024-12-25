@@ -210,19 +210,20 @@ Suppose the user wants to mark all emails as read. The user is on a Mac, and the
 `Action-Operation-Sensitive` format. The properly **concatenated prompt** should be:
 
 ```
-Task: 帮我将所有的邮件标注为已读
+Task: Please mark all my emails as read
+History steps:
 (Platform: Mac)
 (Answer in Action-Operation-Sensitive format.)
 ```
 
-Below are **sample outputs** for different format requirements:
+Note: even if there are no historical actions, "History steps:" still needs to be appended in the prompt. Below are **sample outputs** for different format requirements:
 
 <details>
 <summary>Answer in Action-Operation-Sensitive format</summary>
 
 ```
-Action: 点击页面顶部工具栏中的“全部标为已读”按钮，将所有邮件标记为已读。
-Grounded Operation: CLICK(box=[[219,186,311,207]], element_type='可点击文本', element_info='全部标为已读')
+Action: Click the 'Mark all as read' button in the top toolbar of the page to mark all emails as read.
+Grounded Operation: CLICK(box=[[219,186,311,207]], element_type='Clickable text', element_info='Mark all emails as read')
 <<一般操作>>
 ```
 
@@ -232,10 +233,10 @@ Grounded Operation: CLICK(box=[[219,186,311,207]], element_type='可点击文本
 <summary>Answer in Status-Plan-Action-Operation format</summary>
 
 ```
-Status: 当前处于邮箱界面[[0, 2, 998, 905]]，左侧是邮箱分类[[1, 216, 144, 570]]，中间是收件箱[[144, 216, 998, 903]]，已经点击“全部标为已读”按钮[[223, 178, 311, 210]]。
-Plan: 未来需要: 1. 点击“全部标记为已读”按钮；2. 任务结束。
-Action: 点击收件箱页面顶部中间的“全部标记为已读”按钮，将所有邮件标记为已读。
-Grounded Operation: CLICK(box=[[219,186,311,207]], element_type='可点击文本', element_info='全部标为已读')
+Status: Currently in the email interface [[0, 2, 998, 905]], with the email categories on the left [[1, 216, 144, 570]], and the inbox in the center [[144, 216, 998, 903]]. The "Mark all as read" button has been clicked [[223, 178, 311, 210]].
+Plan: Future tasks: 1. Click the 'Mark all as read' button; 2. Task complete.
+Action: Click the "Mark all as read" button at the top center of the inbox page to mark all emails as read.
+Grounded Operation: CLICK(box=[[219,186,311,207]], element_type='Clickable text', element_info='Mark all emails as read')
 ```
 
 </details>
@@ -244,9 +245,9 @@ Grounded Operation: CLICK(box=[[219,186,311,207]], element_type='可点击文本
 <summary>Answer in Status-Action-Operation-Sensitive format</summary>
 
 ```
-Status: 当前处于邮箱界面[[0, 2, 998, 905]]，左侧是邮箱分类[[1, 216, 144, 570]]，中间是收件箱[[144, 216, 998, 903]]，已经点击“全部标为已读”按钮[[223, 178, 311, 210]]。
-Action: 点击页面顶部工具栏中的“全部标为已读”按钮，将所有邮件标记为已读。
-Grounded Operation: CLICK(box=[[219,186,311,207]], element_type='可点击文本', element_info='全部标为已读')
+Status: Currently in the email interface [[0, 2, 998, 905]], with the email categories on the left [[1, 216, 144, 570]], and the inbox in the center [[144, 216, 998, 903]]. The "Mark all as read" button has been clicked [[223, 178, 311, 210]].
+Action: Click the "Mark all as read" button at the top center of the inbox page to mark all emails as read.
+Grounded Operation: CLICK(box=[[219,186,311,207]], element_type='Clickable text', element_info='Mark all emails as read')
 <<一般操作>>
 ```
 
@@ -256,9 +257,9 @@ Grounded Operation: CLICK(box=[[219,186,311,207]], element_type='可点击文本
 <summary>Answer in Status-Action-Operation format</summary>
 
 ```
-Status: 当前处于邮箱界面[[0, 2, 998, 905]]，左侧是邮箱分类[[1, 216, 144, 570]]，中间是收件箱[[144, 216, 998, 903]]，已经点击“全部标为已读”按钮[[223, 178, 311, 210]]。
-Action: 在收件箱页面顶部，点击“全部标记为已读”按钮，将所有邮件标记为已读。
-Grounded Operation: CLICK(box=[[219,186,311,207]], element_type='可点击文本', element_info='全部标为已读')
+Status: Currently in the email interface [[0, 2, 998, 905]], with the email categories on the left [[1, 216, 144, 570]], and the inbox in the center [[144, 216, 998, 903]]. The "Mark all as read" button has been clicked [[223, 178, 311, 210]].
+Action: Click the "Mark all as read" button at the top center of the inbox page to mark all emails as read.
+Grounded Operation: CLICK(box=[[219,186,311,207]], element_type='Clickable text', element_info='Mark all emails as read')
 ```
 
 </details>
@@ -267,7 +268,7 @@ Grounded Operation: CLICK(box=[[219,186,311,207]], element_type='可点击文本
 <summary>Answer in Action-Operation format</summary>
 
 ```
-Action: 在左侧邮件列表中，右键单击第一封邮件，以打开操作菜单。
+Action: Right-click the first email in the left email list to open the action menu.
 Grounded Operation: RIGHT_CLICK(box=[[154,275,343,341]], element_info='[AXCell]')
 ```
 
