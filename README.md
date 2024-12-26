@@ -2,7 +2,7 @@
 
 [中文文档](README_zh.md)
 
-- 🔥 **December 2024:** We open-sourced **the latest version of the CogAgent-9B-20241220 model**. Compared to the
+- 🔥 🆕 **December 2024:** We open-sourced **the latest version of the CogAgent-9B-20241220 model**. Compared to the
   previous version of CogAgent, `CogAgent-9B-20241220` features significant improvements in GUI perception, reasoning
   accuracy, action space completeness, task universality, and generalization. It supports bilingual (Chinese and
   English) interaction through both screen captures and natural language.
