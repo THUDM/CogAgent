@@ -39,9 +39,9 @@ META_PARAMETER = {
 
 def identify_os():
     os_detail = platform.platform()
-    if "mac" in os_detail:
+    if "mac" in os_detail.lower():
         return "Mac"
-    elif "windows" in os_detail:
+    elif "windows" in os_detail.lower():
         return "Win"
     else:
         raise ValueError(
