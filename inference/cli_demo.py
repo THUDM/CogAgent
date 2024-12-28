@@ -3,7 +3,7 @@ import os
 import re
 import torch
 from PIL import Image, ImageDraw
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from typing import List
 
 
@@ -96,6 +96,7 @@ def main():
         args.model_dir,
         torch_dtype=torch.bfloat16,
         trust_remote_code=True,
+        quantization_config=BitsAndBytesConfig(load_in_4bit=True), # For INT8 and INT4
         device_map="auto",
     ).eval()
     # Initialize platform and selected format strings
