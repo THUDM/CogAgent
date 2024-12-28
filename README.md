@@ -15,9 +15,9 @@
 
 ## Model Introduction
 
-|        Model         |                                                                                                                                                          Model Download Links                                                                                                                                                           | Technical Documentation                                                                                                                                                                                                               | Online Demo                                                                                                                                                                                                                                     |                                                          
-|:--------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|   
-| cogagent-9b-20241220 |          [🤗 HuggingFace](https://huggingface.co/THUDM/cogagent-9b-20241220)<br> [🤖 ModelScope](https://modelscope.cn/models/ZhipuAI/cogagent-9b-20241220) <br> [🟣 WiseModel](https://wisemodel.cn/models/ZhipuAI/cogagent-9b-20241220) <br>[🧩 Modelers (Ascend)](https://modelers.cn/models/zhipuai/cogagent-9b-20241220)           | [📄 Official Technical Blog](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report)<br/>[📘 Practical Guide (Chinese)](https://zhipu-ai.feishu.cn/wiki/MhPYwtpBhinuoikNIYYcyu8dnKv?fromScene=spaceOverview) | [🤗 HuggingFace Space](https://huggingface.co/spaces/THUDM-HF-SPACE/CogAgent-Demo)<br/>[🤖 ModelScope Space](https://modelscope.cn/studios/ZhipuAI/CogAgent-Demo)<br/>[🧩 Modelers Space (Ascend)](https://modelers.cn/spaces/zhipuai/CogAgent) |
+|        Model         |                                                                                                                                                 Model Download Links                                                                                                                                                 | Technical Documentation                                                                                                                                                                                                               | Online Demo                                                                                                                                                                                                                                     |                                                          
+|:--------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|   
+| cogagent-9b-20241220 | [🤗 HuggingFace](https://huggingface.co/THUDM/cogagent-9b-20241220)<br> [🤖 ModelScope](https://modelscope.cn/models/ZhipuAI/cogagent-9b-20241220) <br> [🟣 WiseModel](https://wisemodel.cn/models/ZhipuAI/cogagent-9b-20241220) <br>[🧩 Modelers (Ascend)](https://modelers.cn/models/zhipuai/cogagent-9b-20241220) | [📄 Official Technical Blog](https://cogagent.aminer.cn/blog#/articles/cogagent-9b-20241220-technical-report)<br/>[📘 Practical Guide (Chinese)](https://zhipu-ai.feishu.cn/wiki/MhPYwtpBhinuoikNIYYcyu8dnKv?fromScene=spaceOverview) | [🤗 HuggingFace Space](https://huggingface.co/spaces/THUDM-HF-SPACE/CogAgent-Demo)<br/>[🤖 ModelScope Space](https://modelscope.cn/studios/ZhipuAI/CogAgent-Demo)<br/>[🧩 Modelers Space (Ascend)](https://modelers.cn/spaces/zhipuai/CogAgent) |
 
 ### Model Overview
 
@@ -76,8 +76,10 @@ external GUI Grounding models.
 
 ### Inference and Fine-tuning Costs
 
-+ At `BF16` precision, the model requires **at least** `29GB` of GPU memory for inference. Using `INT4` precision is *
-  *not** recommended due to significant performance loss.
++ The model requires at least 29GB of VRAM for inference at `BF16` precision. Using `INT4` precision for inference is
+  not recommended due to significant performance loss. The VRAM usage for `INT4` inference is about 8GB, while for
+  `INT8` inference it is about 15GB. In the `inference/cli_demo.py` file, we have commented out these two lines. You can
+  uncomment them and use `INT4` or `INT8` inference. This solution is only supported on NVIDIA devices.
 + All GPU references above refer to A100 or H100 GPUs. For other devices, you need to calculate the required GPU/CPU
   memory accordingly.
 + During SFT (Supervised Fine-Tuning), this codebase freezes the `Vision Encoder`, uses a batch size of 1, and trains on
@@ -152,6 +154,7 @@ Printed prompt:
 > 4. CLICK(box=[[280,708,710,809]], element_info='Doors on Sale') Click the "Doors On Sale" button in the middle of the
      page to view the doors that are currently on sale.
 >    
+>
 > (Platform: WIN)
 >
 > (Answer in Action-Operation format.)
@@ -216,7 +219,8 @@ History steps:
 (Answer in Action-Operation-Sensitive format.)
 ```
 
-Note: even if there are no historical actions, "History steps:" still needs to be appended in the prompt. Below are **sample outputs** for different format requirements:
+Note: even if there are no historical actions, "History steps:" still needs to be appended in the prompt. Below are *
+*sample outputs** for different format requirements:
 
 <details>
 <summary>Answer in Action-Operation-Sensitive format</summary>
