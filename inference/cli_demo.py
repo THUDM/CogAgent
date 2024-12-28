@@ -96,8 +96,9 @@ def main():
         args.model_dir,
         torch_dtype=torch.bfloat16,
         trust_remote_code=True,
-        quantization_config=BitsAndBytesConfig(load_in_4bit=True), # For INT8 and INT4
         device_map="auto",
+        # quantization_config=BitsAndBytesConfig(load_in_8bit=True), # For INT8 quantization
+        # quantization_config=BitsAndBytesConfig(load_in_4bit=True), # For INT4 quantization
     ).eval()
     # Initialize platform and selected format strings
     platform_str = f"(Platform: {args.platform})\n"
