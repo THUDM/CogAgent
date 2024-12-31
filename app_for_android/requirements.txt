@@ -1,0 +1,7 @@
+scikit-image==0.25.0
+opencv-python==4.10
+numpy==2.2.1
+pillow==11.0.0
+openai==1.58.1
+gradio>=5.9.0
+
