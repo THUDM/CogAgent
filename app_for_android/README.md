@@ -1,7 +1,7 @@
 ## 部署 Agent for Android Demo
 
 
-### 运行服务端
+### 🔧运行服务端
 
 1. 在本步骤之前，清确保已经安装了本项目的首页的`requirements.txt`的全部依赖。这些依赖能保证服务端正常运行。
 2. 在远程服务器拉起服务(app目录内)。
@@ -13,7 +13,7 @@ python openai_demo.py --model_path THUDM/cogagent-9b-20241220 --host 0.0.0.0 --p
 
 这将在服务器拉起一个模仿`OpenAI`接口格式的服务端，默认端口部署在 http://0.0.0.0:7870 。
 
-### 安装环境(用户端)
+### 🔧安装环境(用户端)
 
 #### 安装用户端的依赖。
 ```shell
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 3. 在系统设置中将默认输入法切换为 “ADB Keyboard”。`adb shell ime set com.android.adbkeyboard/.AdbIME`
 
 
-### 运行客户端
+### 🔧运行客户端
 
 运行客户端，请确定以下信息:
 
@@ -62,3 +62,6 @@ python client_for_android.py
 
 
 
+## 📦相关项目
+
+* [Mobile-Agent: The Powerful Mobile Device Operation Assistant Family](https://github.com/X-PLUG/MobileAgent)
