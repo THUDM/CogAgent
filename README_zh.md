@@ -169,6 +169,11 @@ query = f"Task: {task}{history_str}\n{platform_str}{format_str}" # Be careful ab
    ```
    query = f'{task}{history}{platform}{format}'
    ```
+5. `继续功能`
+   CogAgent允许用户让模型`继续回答`。这需要用户在`{task}`后加入`[Continue]\n`字段。在这种情况下，拼接顺序和结果应该如下所示：
+   ```
+   query = f'{task}[Continue]\n{history}{platform}{format}'
+   ```
 
 ### 模型返回部分
 

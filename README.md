@@ -192,7 +192,13 @@ the [Practical Documentation (in Chinese), "Prompt Concatenation" section](https
    ```
    query = f'{task}{history}{platform}{format}'
    ```
-
+   
+5. **`Continue` field**  
+   CogAgent allows users to let the model `continue answering`. This requires users to append the `[Continue]\n` field after `{task}`. In such cases, the concatenation sequence and result should be as follows:
+   ```
+   query = f'{task}[Continue]\n{history}{platform}{format}'
+   ```
+   
 ### Model Output
 
 1. **Sensitive operations**: Includes `<<敏感操作>>` (“sensitive operation”) and `<<一般操作>>` (“general operation”).
