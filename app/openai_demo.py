@@ -3,7 +3,7 @@ This script creates an OpenAI Server demo with transformers for the CogAgent mod
 using the OpenAI API to interact with the model.
 
 You can specify the model path, host, and port via command-line arguments, for example:
-python openai_demo.py --model_path THUDM/cogagent-9b --host 0.0.0.0 --port 8000
+python openai_demo.py --model_path THUDM/cogagent-9b-20241220 --host 0.0.0.0 --port 8000
 """
 
 import argparse

@@ -506,7 +506,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--api_key", required=True, help="OpenAI API Key.")
     parser.add_argument("--base_url", required=True, help="OpenAI API Base URL.")
-    parser.add_argument("--model", default="cogagent-9b-20241220", help="Model name to use.")
+    parser.add_argument("--model", default="CogAgent", help="Model name to use.")
     parser.add_argument(
         "--client_name",
         default="127.0.0.1",

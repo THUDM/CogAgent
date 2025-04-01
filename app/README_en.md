@@ -67,7 +67,13 @@ Here, we use **Pycharm** to run `client.py`. Therefore, you need to grant permis
 Start the server on the remote machine:
 
 ```shell
-python openai_demo.py --model_path THUDM/cogagent1.5-9b --host 0.0.0.0 --port 7870
+python openai_demo.py --model_path THUDM/cogagent-9b-20241220 --host 0.0.0.0 --port 7870
+```
+
+or use vLLM to start the server:
+
+```shell
+python vllm_openai_demo.py --model_path THUDM/cogagent-9b-20241220 --host 0.0.0.0 --port 7870
 ```
 
 This command launches a server on the machine that mimics the `OpenAI` interface format. By default, it will be available at http://0.0.0.0:7870.

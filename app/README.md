@@ -74,6 +74,12 @@ mkdir caches
 python openai_demo.py --model_path THUDM/cogagent-9b-20241220 --host 0.0.0.0 --port 7870
 ```
 
+或者使用vllm启动远程服务
+
+```shell
+python vllm_openai_demo.py --model_path THUDM/cogagent-9b-20241220 --host 0.0.0.0 --port 7870
+```
+
 这将在服务器拉起一个模仿`OpenAI`接口格式的服务端，默认端口部署在 http://0.0.0.0:7870 。
 
 ### 运行客户端
@@ -86,7 +92,7 @@ python openai_demo.py --model_path THUDM/cogagent-9b-20241220 --host 0.0.0.0 --p
 - 本 Demo没有设置 API, 因此`api_key`参数设置为`EMPTY`。
 
 ```shell
-python client.py --api_key EMPTY --base_url http://127.0.0.1:7870/v1  --client_name 127.0.0.1 --client_port 7860 --model cogagent-9b-20241220
+python client.py --api_key EMPTY --base_url http://127.0.0.1:7870/v1  --client_name 127.0.0.1 --client_port 7860 --model CogAgent
 ```
 
 通过上述命令，你将能在本地运行客户端，连接到服务端，并且使用`cogagent-9b-20241220`模型。
