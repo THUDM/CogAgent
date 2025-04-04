@@ -4,6 +4,7 @@ draft*
 app/caches
 .DS_Store
 *.zip
+.test*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

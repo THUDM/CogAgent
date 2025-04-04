@@ -92,8 +92,6 @@ external GUI Grounding models.
 + `Ascend devices` have not been tested for SFT fine-tuning. We have only tested them on the `Atlas800` training server
   cluster. You need to modify the inference code accordingly based on the loading mechanism described in the
   `Ascend device` download link.
-+ Currently, we do **not** support inference with the `vLLM` framework. We will submit a PR as soon as possible to
-  enable it.
 + The online demo link does **not** support controlling computers; it only allows you to view the model's inference
   results. We recommend deploying the model locally.
 
